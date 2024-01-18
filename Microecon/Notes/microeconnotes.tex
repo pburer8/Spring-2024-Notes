@@ -13,11 +13,57 @@
 
 \maketitle
 \newpage
+\setlength{\parindent}{0pt}
 
 \tableofcontents
 
 \newpage
 
+\section{Mathematics of Optimization}
 
+\subsection{Unconstrained Optimization}
+
+\begin{itemize}
+    \item First order conditions: $\frac{\delta f}{\delta x} = 0, \frac{\delta f}{\delta y} = 0$
+    \item Second order conditions: $\frac{\delta^{2} f}{\delta x^{2}} < 0, \frac{\delta^{2} f}{\delta y^{2}} < 0$
+    \item Additionally, $(\frac{\delta^{2} f}{\delta x^{2}} \times \frac{\delta^{2} f}{\delta y^{2}}) - (\frac{\delta^{2} f}{\delta x \delta y})^{2} > 0$
+\end{itemize}
+
+Example: $G(T,C) = 50 + 10T + 16C - T^{2} - 2TC - 2C^{2}$
+
+$\frac{\delta G}{\delta T} = 10 - 2T - 2C$
+
+$\frac{\delta G}{\delta C} = 16 - 2T - 4C$
+
+$\begin{bmatrix}
+    -2 & -2 & -10 \\
+    -2 & -4 & -16
+\end{bmatrix} \Rightarrow \begin{bmatrix}
+    -2 & -2 & -10 \\
+    0 & -2 & -6
+\end{bmatrix} \Rightarrow \begin{bmatrix}
+    -2 & 0 & -4 \\
+    0 & -2 & -6
+\end{bmatrix}$
+
+$\Rightarrow T = 2, C = 3$
+
+$\frac{\delta^{2} G}{\delta T^{2}} = -2 < 0$
+
+$\frac{\delta^{2} G}{\delta C^{2}} = -4 < 0$
+
+$(\frac{\delta^{2}G}{\delta T^{2}} \times \frac{\delta^{2} G}{\delta C^{2}}) - (\frac{\delta^{2}G}{\delta T \delta C})^{2} = (-2 \times -4) - (-2)^{2} = 8 - 4 = 4 > 0$
+
+$\Rightarrow G(2, 3) \text{ is a maximum } \Rightarrow G(2,3) = 50 + 20 + 48 - 4 - 12 - 18 = 84$
+
+\subsection{Constrained Optimization}
+
+To find the critical points of $f(x)$ subject to some constraints $g(x) = c$ we have
+
+$\begin{bmatrix}
+    \frac{\delta f}{\delta x} & = \lambda\frac{\delta g}{\delta x} \\
+    \frac{\delta f}{\delta y} & = \lambda\frac{\delta g}{\delta y} \\
+    g(x) & = c
+\end{bmatrix}$
 
 \end{document}
