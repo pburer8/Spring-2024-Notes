@@ -1,9 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1705614378.44267 "c:/Users/Marie/Documents/Spring-2024-Notes/Intro to Software Dev/Notes/softwaredevnotes.tex" "softwaredevnotes.pdf" "softwaredevnotes" 1705614379.69266 0
+["pdflatex"] 1705619694.44302 "c:/Users/Marie/Documents/Spring-2024-Notes/PLC/Notes/plcnotes.tex" "plcnotes.pdf" "plcnotes" 1705619696.16298 0
   "C:/Users/Marie/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1705514218 81684 e11c674afe7630b828c4f0e88a1b8253 ""
-  "C:/Users/Marie/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1666820108 14064 dfbdb0408720005d896fbbab975c7079 ""
   "C:/Users/Marie/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1705585623 24224975 56664f5f707f5243edad391f37bab15c ""
-  "C:/Users/Marie/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/tcrm1200.tfm" 993058908 1444 95ffe0f19b974d50849790c8225c7ef7 ""
   "C:/Users/Marie/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Users/Marie/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1233951854 916 f87d7c45f9c908e672703b83b72241a3 ""
   "C:/Users/Marie/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1233951854 928 2dc8d444221b7a635bb58038579b861a ""
@@ -137,15 +135,15 @@
   "C:/Users/Marie/AppData/Local/Programs/MiKTeX/tex/latex/tools/xspace.sty" 1700599895 4545 9f5ea23ab1c91476c42749893f790666 ""
   "C:/Users/Marie/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Marie/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "c:/Users/Marie/Documents/Spring-2024-Notes/Intro to Software Dev/Notes/softwaredevnotes.tex" 1705614375 1528 112a90186a808bf99843774b4572e548 ""
-  "softwaredevnotes.aux" 1705614379 267 d5b071b42d4f75cf9fa5b8241b534fc9 "pdflatex"
-  "softwaredevnotes.out" 1705614379 83 40ca9bb7b1b18c52f7b5ca5f359c5ce3 "pdflatex"
-  "softwaredevnotes.tex" 1705614375 1528 112a90186a808bf99843774b4572e548 ""
-  "softwaredevnotes.toc" 1705614379 64 c691ed377a0b1d161f454a695b7ef8de "pdflatex"
+  "c:/Users/Marie/Documents/Spring-2024-Notes/PLC/Notes/plcnotes.tex" 1705619693 877 405835c4bed876d546b25f784638ac53 ""
+  "plcnotes.aux" 1705619695 282 e4e7a0a3141010f3ccdac42040a87928 "pdflatex"
+  "plcnotes.out" 1705619695 164 79cc9c1c8fa35e4a15f430a01da78490 "pdflatex"
+  "plcnotes.tex" 1705619693 877 405835c4bed876d546b25f784638ac53 ""
+  "plcnotes.toc" 1705619695 79 50f1726520a5bfae76652263119e7694 "pdflatex"
   (generated)
-  "softwaredevnotes.aux"
-  "softwaredevnotes.log"
-  "softwaredevnotes.out"
-  "softwaredevnotes.pdf"
-  "softwaredevnotes.toc"
+  "plcnotes.aux"
+  "plcnotes.log"
+  "plcnotes.out"
+  "plcnotes.pdf"
+  "plcnotes.toc"
   (rewritten before read)
