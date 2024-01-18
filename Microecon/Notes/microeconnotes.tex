@@ -66,4 +66,17 @@ $\begin{bmatrix}
     g(x) & = c
 \end{bmatrix}$
 
+Example: $T = 19.25 - 6\ln(R) - 4\ln(W)$, constraint is $R + W = 5$
+
+$\begin{bmatrix}
+    19.25 - \frac{6}{R} & = \lambda \\
+    19.25 - \frac{4}{W} & = \lambda \\
+    R + W & = 5
+\end{bmatrix}$
+
+$19.25 - \frac{6}{R} = 19.25 - \frac{4}{W} \Rightarrow 6W = 4R$
+
+$W = 5 - R \Rightarrow 6(5 - R) = 4R \Rightarrow 30 - 6R = 4R \Rightarrow 10R = 30 \Rightarrow R = 3, W = 2$
+
+$T(3, 2) = 19.25 - 6\ln(3) - 4\ln(2) \approx 9.89$
 \end{document}
