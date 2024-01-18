@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1705595868.7632 "c:/Users/Marie/Documents/Spring-2024-Notes/Microecon/Notes/microeconnotes.tex" "microeconnotes.pdf" "microeconnotes" 1705595870.51631 0
+["pdflatex"] 1705596261.50741 "c:/Users/Marie/Documents/Spring-2024-Notes/Microecon/Notes/microeconnotes.tex" "microeconnotes.pdf" "microeconnotes" 1705596263.01306 0
   "C:/Users/Marie/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1705514218 81684 e11c674afe7630b828c4f0e88a1b8253 ""
   "C:/Users/Marie/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1666820108 14064 dfbdb0408720005d896fbbab975c7079 ""
   "C:/Users/Marie/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1705585623 24224975 56664f5f707f5243edad391f37bab15c ""
@@ -31,6 +31,7 @@
   "C:/Users/Marie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1247593067 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "C:/Users/Marie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1247593067 32726 39f0f9e62e84beb801509898a605dbd5 ""
   "C:/Users/Marie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247593067 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "C:/Users/Marie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1247593067 32626 5abc8bb2f28aa647d4c70f8ea38cc0d3 ""
   "C:/Users/Marie/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580390158 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "C:/Users/Marie/AppData/Local/Programs/MiKTeX/tex/generic/atbegshi/atbegshi.sty" 1575571100 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "C:/Users/Marie/AppData/Local/Programs/MiKTeX/tex/generic/bigintcalc/bigintcalc.sty" 1576433602 40635 c40361e206be584d448876bba8a64a3b ""
@@ -150,11 +151,11 @@
   "C:/Users/Marie/AppData/Local/Programs/MiKTeX/tex/latex/tools/xspace.sty" 1700599895 4545 9f5ea23ab1c91476c42749893f790666 ""
   "C:/Users/Marie/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Marie/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "c:/Users/Marie/Documents/Spring-2024-Notes/Microecon/Notes/microeconnotes.tex" 1705595867 2465 28891bcb0b1f40c7b088b2b29fbe7985 ""
-  "microeconnotes.aux" 1705595870 550 d8480a0a4f8996c7c008f17884dc5af6 "pdflatex"
-  "microeconnotes.out" 1705595870 554 7ca4a4d8ca6200abc9038ee7faabbaf6 "pdflatex"
-  "microeconnotes.tex" 1705595867 2465 28891bcb0b1f40c7b088b2b29fbe7985 ""
-  "microeconnotes.toc" 1705595870 265 667454ecc5c72bddcc2b582654c61ead "pdflatex"
+  "c:/Users/Marie/Documents/Spring-2024-Notes/Microecon/Notes/microeconnotes.tex" 1705596260 2975 dbbb566d1bbb952ebf3f85bb5ba1c5fa ""
+  "microeconnotes.aux" 1705596262 550 d8480a0a4f8996c7c008f17884dc5af6 "pdflatex"
+  "microeconnotes.out" 1705596262 554 7ca4a4d8ca6200abc9038ee7faabbaf6 "pdflatex"
+  "microeconnotes.tex" 1705596260 2975 dbbb566d1bbb952ebf3f85bb5ba1c5fa ""
+  "microeconnotes.toc" 1705596262 265 667454ecc5c72bddcc2b582654c61ead "pdflatex"
   (generated)
   "microeconnotes.aux"
   "microeconnotes.log"
