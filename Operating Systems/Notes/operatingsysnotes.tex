@@ -13,6 +13,7 @@
 
 \maketitle
 \newpage
+\setlength{\parindent}{0pt}
 
 \tableofcontents
 
@@ -154,4 +155,60 @@ Build Large Computer Systems
     \item Goals: 
 \end{itemize}
 
+\section{OS Structure and Architecture}
+
+Modern OS Functionality:
+\begin{itemize}
+    \item Concurrency
+    \item I/O Devices
+    \item Memory management
+    \item Files
+    \item Distributed systems and networks
+\end{itemize}
+
+OS Principles:
+\begin{itemize}
+    \item OS as juggler
+    \item OS as government
+    \item OS as complex system
+    \item OS as history teacher
+\end{itemize}
+
+Protection:
+\begin{itemize}
+    \item Kernel mode vs User Mode
+    
+    To protect the system from aberrant users, some instructions are restricted to use only by the OS
+
+    Users may not
+    \begin{itemize}
+        \item address I/O directly
+        \item use instructions that manipulate the state of memory
+        \item set the mode bits that determine user or kernel mode
+        \item disable and enable interrupts
+        \item halt the machine
+    \end{itemize}
+
+    In kernel mode, the OS can do all of these things
+
+    \item Hardware needs to support at least both kernel and user
+\end{itemize}
+
+Crossing Protection Boundaries:
+
+System call: OS procedure that executes privileged instructions
+\begin{itemize}
+    \item Causes a trap
+    \item The trap handler uses the parameter to jump
+    \item The handler saves caller's state so it can restore control
+    \item The architecture must permit this
+\end{itemize}
+
+Memory Protection:
+\begin{itemize}
+    \item Architecture must provide support to the OS to protect user programs and itself
+    \item The simplest technique is to use base and limit registers
+    \item Instantiated by the OS before starting a program
+    \item The CPU checks user reference ensuring it falls between base and limit values
+\end{itemize}
 \end{document}
