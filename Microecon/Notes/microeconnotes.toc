@@ -1,3 +1,4 @@
 \contentsline {section}{\numberline {1}Mathematics of Optimization}{3}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Unconstrained Optimization}{3}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Constrained Optimization}{3}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Consumer Theory}{4}{section.2}%
