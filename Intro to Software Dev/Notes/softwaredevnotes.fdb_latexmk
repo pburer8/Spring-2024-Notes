@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1705614378.44267 "c:/Users/Marie/Documents/Spring-2024-Notes/Intro to Software Dev/Notes/softwaredevnotes.tex" "softwaredevnotes.pdf" "softwaredevnotes" 1705614379.69266 0
+["pdflatex"] 1706047074.1698 "c:/Users/Marie/Documents/Spring-2024-Notes/Intro to Software Dev/Notes/softwaredevnotes.tex" "softwaredevnotes.pdf" "softwaredevnotes" 1706047076.45963 0
   "C:/Users/Marie/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1705514218 81684 e11c674afe7630b828c4f0e88a1b8253 ""
   "C:/Users/Marie/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1666820108 14064 dfbdb0408720005d896fbbab975c7079 ""
   "C:/Users/Marie/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1705585623 24224975 56664f5f707f5243edad391f37bab15c ""
@@ -137,11 +137,11 @@
   "C:/Users/Marie/AppData/Local/Programs/MiKTeX/tex/latex/tools/xspace.sty" 1700599895 4545 9f5ea23ab1c91476c42749893f790666 ""
   "C:/Users/Marie/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Marie/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "c:/Users/Marie/Documents/Spring-2024-Notes/Intro to Software Dev/Notes/softwaredevnotes.tex" 1705614375 1528 112a90186a808bf99843774b4572e548 ""
-  "softwaredevnotes.aux" 1705614379 267 d5b071b42d4f75cf9fa5b8241b534fc9 "pdflatex"
-  "softwaredevnotes.out" 1705614379 83 40ca9bb7b1b18c52f7b5ca5f359c5ce3 "pdflatex"
-  "softwaredevnotes.tex" 1705614375 1528 112a90186a808bf99843774b4572e548 ""
-  "softwaredevnotes.toc" 1705614379 64 c691ed377a0b1d161f454a695b7ef8de "pdflatex"
+  "c:/Users/Marie/Documents/Spring-2024-Notes/Intro to Software Dev/Notes/softwaredevnotes.tex" 1706047072 2823 745c085b5f1a7ced1920fa27e65b4030 ""
+  "softwaredevnotes.aux" 1706047076 519 5f9e2a82dd47f1d93f8bbc034ed308d8 "pdflatex"
+  "softwaredevnotes.out" 1706047076 477 83b201bd3d9933843a864f35890f0d49 "pdflatex"
+  "softwaredevnotes.tex" 1706047072 2823 745c085b5f1a7ced1920fa27e65b4030 ""
+  "softwaredevnotes.toc" 1706047076 234 32520d64f72c83cebf3b9e41f658e36f "pdflatex"
   (generated)
   "softwaredevnotes.aux"
   "softwaredevnotes.log"
