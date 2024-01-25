@@ -58,7 +58,11 @@ $\Rightarrow G(2, 3) \text{ is a maximum } \Rightarrow G(2,3) = 50 + 20 + 48 - 4
 
 \subsection{Constrained Optimization}
 
-To find the critical points of $f(x)$ subject to some constraints $g(x) = c$ we have
+To find the critical points of $f(x,y)$ subject to some constraints $c - g(x,y) = 0$ we have
+
+Lagrangian: $L = f(x,y) - \lambda(c - g(x,y))$
+
+We take the derivative wrt x, y, and $\lambda$ to get
 
 $\begin{bmatrix}
     \frac{\delta f}{\delta x} & = \lambda\frac{\delta g}{\delta x} \\
@@ -119,5 +123,28 @@ Defining preferences:
         \item Reflexive: An individual must be indifferent between two identical bundles of goods
         \item Transitivity: No cycles
     \end{itemize}
+\end{itemize}
+
+Anchoring and Adjustment:
+
+In multi-dimensional problems, people tend to anchor on one dimension and adjust for the other.
+
+Utility Functions:
+
+A utility function is a function from bundles of goods into real numbers.
+\begin{itemize}
+    \item $x \succ y \Rightarrow u(x) > u(y)$
+    \item More preferred bundles must be assigned larger numbers
+    \item If preferences are well-behaved, we can write down a utility function that captures the preferences
+\end{itemize}
+
+Ordinal utility function: the only thing that matters is the order
+
+Cardinal utility function: the numbers have significance and meaning
+
+Assumptions about utility functions:
+\begin{itemize}
+    \item Monotonicity: $x > x' \Rightarrow u(x,y) \ge u(x', y)$
+    \item Convexity: Let $\alpha \text{ s.t. } 0 < \alpha < 1$. If $u(x,y) = u(x',y'), u(\alpha x + (1 - \alpha)x', \alpha y + (1 - \alpha)y') \ge u(x,y)$
 \end{itemize}
 \end{document}
