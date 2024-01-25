@@ -211,4 +211,85 @@ Memory Protection:
     \item Instantiated by the OS before starting a program
     \item The CPU checks user reference ensuring it falls between base and limit values
 \end{itemize}
+
+Memory Hierarcy:
+
+Higher = small, fast, more \$, less latency
+\begin{itemize}
+    \item registers (1 cycle)
+    \item L1 (2 cycle)
+    \item L2 (7 cycle)
+    \item RAM (100 cycle)
+    \item Disk (40,000,000 cycle)
+    \item Network (200,000,000+ cycle)
+\end{itemize}
+
+Process Layout in Memory
+\begin{itemize}
+    \item Stack
+    \item Gap 
+    \item Data 
+    \item Text
+\end{itemize}
+
+Caches
+\begin{itemize}
+    \item Access to main memory is expensive
+    \item Caches are small, fast, inexpensive
+    \begin{itemize}
+        \item Different sizes and locations:
+        \begin{itemize}
+            \item L1: on-chip, smallish
+            \item L2: next to chip, larger
+            \item L3: pretty large, on bus
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+Traps
+\begin{itemize}
+    \item Traps: special conditions detected by architecture
+    \item On detecting a trap, the hardware
+    \begin{itemize}
+        \item Saves the state of the process
+        \item Transfers control to appropriate trap handler
+        \begin{itemize}
+            \item The CPU indexes the memory-mapped trap vector with the trap number,
+            \item then jumps to the address given in the vector, and
+            \item starts to execute at that address
+            \item On completion, the OS resumes execution of the process
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+I/O Control
+\begin{itemize}
+    \item Each I/O device has a little processor that enable autonomous function
+    \item CPU issues commands to I/O devices 
+    \item When an I/O device complete, it issues an interrupt
+    \item CPU stops and processes the interrupt
+\end{itemize}
+
+Memory Mapped I/O
+\begin{itemize}
+    \item Enable direct access to I/O controller
+    \item PCs reserve a part of the memory and put the device manager in that memory
+    \item Access becomes very fast
+\end{itemize}
+
+Interrupt-based asynchronous I/O
+\begin{itemize}
+    \item Device controller has its own small processor
+    \item Puts an interrupt on the bus when done
+    \item CPU gets interrupt
+    \begin{itemize}
+        \item Save critical state
+        \item Disable interrupts
+        \item Save state that interrupt handler will modify
+        \item Invoke interrupt handler using the interrupt vector
+        \item Restore software state
+        \item Enable interrupts
+        \item Restore hardware state
+    \end{itemize}
+\end{itemize}
 \end{document}
