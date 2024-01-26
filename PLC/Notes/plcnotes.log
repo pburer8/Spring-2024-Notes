@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.12) (preloaded format=pdflatex 2024.1.18)  18 JAN 2024 17:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.12) (preloaded format=pdflatex 2024.1.18)  25 JAN 2024 17:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -505,26 +505,26 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write5
 \openout5 = `plcnotes.toc'.
 
- [2] [3] (plcnotes.aux)
+ [2] [3] [4] (plcnotes.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `plcnotes.out' has not changed.
-(rerunfilecheck)             Checksum: 79CC9C1C8FA35E4A15F430A01DA78490;164.
+(rerunfilecheck)             Checksum: CE44A4734B638B41C480ED73C48519AB;752.
  ) 
 Here is how much of TeX's memory you used:
- 20226 strings out of 474485
- 378661 string characters out of 5743734
- 1927528 words of memory out of 5000000
- 42181 multiletter control sequences out of 15000+600000
- 562178 words of font info for 52 fonts, out of 8000000 for 9000
+ 20263 strings out of 474485
+ 379114 string characters out of 5743734
+ 1929528 words of memory out of 5000000
+ 42206 multiletter control sequences out of 15000+600000
+ 567169 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,6n,107p,543b,443s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Marie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Marie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Marie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on plcnotes.pdf (3 pages, 44629 bytes).
+ <C:\Users\Marie\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Marie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Marie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Marie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Marie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Marie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on plcnotes.pdf (4 pages, 73561 bytes).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
- 6 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 80 PDF objects out of 1000 (max. 8388607)
+ 10 named destinations out of 1000 (max. 500000)
+ 45 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -37,4 +37,61 @@ FP also used to make compilers and interpreters
 
 Learning Haskell is good for you, a new paradigm and way to think
 
+\section{Higher-order functions in Haskell}
+
+In FP, functions are first-class
+\begin{itemize}
+    \item Can be outputs
+    \item Can be inputs
+\end{itemize}
+
+To call a function f with argument a, f a
+
+(f . g) x = f (g x)
+
+Consider:
+
+f :: (a $\to$ b) $\to$ (a,a) $\to$ (b,b)
+
+f g (x,y) = (g x, g y)
+
+Anonymous function:
+
+$\backslash x \to x * x$
+
+In definitions:
+
+$id = \backslash x \to x$
+
+As arguments to higher order functions:
+
+applyTwice($\backslash x \to x * x$)
+
+\subsection{Partial Applications and Sections}
+
+Suppose we have f :: Int $\to$ Int $\to$ Int
+
+Then we can write f 3 :: Int $\to$ Int
+
+Int $\to$ Int $\to$ Int is the same as Int $\to$ (Int $\to$ Int)
+
+If we have something like $(+ 10)$, that is a section
+
+\subsection{List Combinators}
+
+Consider map :: (a $\to$ b) $\to$ ([a] $\to$ [b])
+
+f :: a $\to$ b
+
+map f xs applies f to all elements of xs
+
+filter :: (a $\to$ Bool) $\to$ [a] $\to$ [a]
+
+filter p xs keeps every element of xs where p x is True
+
+zipWith :: (a $\to$ b $\to$ c) $\to$ [a] $\to$ [b] $\to$ [c]
+
+zipWith f [x1, ..., xn][y1, ..., y(n+k)] = [f x1 y1, ..., f xn yn]
+
+
 \end{document}
