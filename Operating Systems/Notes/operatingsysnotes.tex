@@ -292,4 +292,108 @@ Interrupt-based asynchronous I/O
         \item Restore hardware state
     \end{itemize}
 \end{itemize}
+
+OS provides process abstraction
+\begin{itemize}
+    \item When you run an exe file, the OS creates a process = a running program
+    \item OS timeshares the CPU across multiple processes: virtualizes CPU
+    \begin{itemize}
+        \item No. of running processes > No. of physical CPU cores
+        \item Programs are responsive to users, even when the CPU is busy
+    \end{itemize}
+    \item OS has a CPU scheduler that picks one of the active processes to execute
+    \begin{itemize}
+        \item Policy: which to run
+        \item Mechanism: how to context switch
+    \end{itemize}
+\end{itemize}
+
+What constitutes a process?
+\begin{itemize}
+    \item PID
+    \item Memory image
+    \begin{itemize}
+        \item Code and data (static)
+        \item Stack and heap (dynamic)
+    \end{itemize}
+    \item CPU context: registers
+    \begin{itemize}
+        \item Program counter
+        \item Current operands
+        \item Stack pointer
+    \end{itemize}
+    \item File descriptors
+    \begin{itemize}
+        \item Pointers to open files and devices
+        \item e.g. STDOUT, STDIN, STDERR
+    \end{itemize}
+\end{itemize}
+
+States of a process
+\begin{itemize}
+    \item Running: executing
+    \item Ready: waiting
+    \item Blocked: not ready to run
+    \begin{itemize}
+        \item Why? Waiting for something
+        \item Unblocked when disk issues an interrupt
+    \end{itemize}
+    \item New: being created
+\end{itemize}
+
+OS data structures
+\begin{itemize}
+    \item OS maintains a data structure of all active processes
+    \item Information about each process is stored in a process control block
+    \begin{itemize}
+        \item Identifier
+        \item State
+        \item Pointers to related processors
+        \item CPU context
+        \item Memory pointers
+        \item Pointers to open files
+    \end{itemize}
+\end{itemize}
+
+What API does the OS provide to user programs?
+\begin{itemize}
+    \item API
+    \item Set of system calls
+    \begin{itemize}
+        \item System call is a function call into the OS code that runs at a higher privilege
+        \item Sensitive operations are allowed only at this high privilege
+        \item Some blocking system calls cause the process to be blocked and descheduled
+    \end{itemize}
+\end{itemize}
+
+Should we rewrite programs for each OS?
+\begin{itemize}
+    \item POSIX API: a standard set of system calls that an OS must implement
+    \begin{itemize}
+        \item POSIX: Portable Operating System Interface
+        \item Most modern OSes are POSIX compliant
+    \end{itemize}
+    \item Program language libraries hide the system calls
+\end{itemize}
+
+Process related system calls in Unix
+\begin{itemize}
+    \item fork() creates a child process
+    \item exec() makes a process execute a given executable
+    \item exit() terminates a process
+    \item wait() causes a parent to block until child terminates
+    \item Many variants exist with different arguments
+\end{itemize}
+
+What happens during a fork?
+\begin{itemize}
+    \item A new process is created by copying the parent's memory image
+    \item The new process is added to process list and schedules
+    \item Then the parent and child operate independently
+    \item On success, the PID of the child process is returned in the parent
+    \begin{itemize}
+        \item 0 is returned in the child
+        \item On failure, -1 is returned to the parent and no child process is created
+    \end{itemize}
+\end{itemize}
 \end{document}
