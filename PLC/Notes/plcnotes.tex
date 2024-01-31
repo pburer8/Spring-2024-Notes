@@ -93,5 +93,17 @@ zipWith :: (a $\to$ b $\to$ c) $\to$ [a] $\to$ [b] $\to$ [c]
 
 zipWith f [x1, ..., xn][y1, ..., y(n+k)] = [f x1 y1, ..., f xn yn]
 
+foldr f z xs = f x1 (f x2 (... (f xn z)))
 
+\section{Data Types and Recursion}
+
+data BinTree = Leaf $|$ Node Char BinTree BinTree
+
+We can write a function on this data type like
+
+height :: BinTree a $\to$ Int
+
+height Leaf = 0
+
+height (Node x t1 t2) = 1 + max (height t1) (height t2)
 \end{document}
