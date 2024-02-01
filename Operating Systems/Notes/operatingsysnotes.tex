@@ -293,6 +293,8 @@ Interrupt-based asynchronous I/O
     \end{itemize}
 \end{itemize}
 
+\section{Process API and Abstraction}
+
 OS provides process abstraction
 \begin{itemize}
     \item When you run an exe file, the OS creates a process = a running program
@@ -394,6 +396,164 @@ What happens during a fork?
     \begin{itemize}
         \item 0 is returned in the child
         \item On failure, -1 is returned to the parent and no child process is created
+    \end{itemize}
+\end{itemize}
+
+What happens during exec?
+\begin{itemize}
+    \item After fork, parent and child are running same code
+    
+    Not too useful!
+    
+    \item A process can run exec() to load a new process 
+\end{itemize}
+
+How does a shell work?
+\begin{itemize}
+    \item In a basic OS, the init process is created after initialization of hardware
+    \item The init process spawns a shell like bash
+    \item Shell reads user command, forks a child, execs the command executable, waits, and reads
+    \item Common commands like ls are all executables that are simply exec'd by the shell
+\end{itemize}
+
+\section{Proper Mechanism of Execution}
+
+Low-level mechanisms
+\begin{itemize}
+    \item How does the OS run a process?
+    \item How does it handle a system call?
+    \item How does it context switch?
+\end{itemize}
+
+Process Execution
+\begin{itemize}
+    \item OS allocates memory and creates memory image
+    \item Points CPU program counter to current instruction
+    \item After setup, OS steps out of the way
+\end{itemize}
+
+A simple function call
+\begin{itemize}
+    \item A function call translates to a jump instruction
+    \item A new stack frame is pushed to stack and stack pointer is updated
+    \item Old value of PC is saved to stack frame and PC is updated
+    \item Stack frame contains return value, function arguments etc.
+\end{itemize}
+
+How is a system call different?
+\begin{itemize}
+    \item System calls are in kernel memory space
+    \item Kernel uses a separate stack from the user stack
+    \item Kernel does not trust user provided addresses
+    \item Instead, it sets up an Interrupt Descriptor Table to keep track
+\end{itemize}
+
+Mechanism of system call: trap instruction
+\begin{itemize}
+    \item When a system call must be made, a special trap instruction is run
+    \item Trap execution
+    \begin{itemize}
+        \item Move CPU to higher privilege level
+        \item Switch to kernel stack
+        \item Save context on kernel stack
+        \item Look up address in IDT and jump to trap handler function in OS code
+    \end{itemize}
+\end{itemize}
+
+More on the trap instuction
+\begin{itemize}
+    \item Executed on hardware in following cases:
+    \begin{itemize}
+        \item System call (program needs OS service)
+        \item Program fault (illegal stuff)
+        \item Interrupt (device needs attention)
+    \end{itemize}
+    \item Across all cases, the mechanism is the same
+    \item IDT has many entries: which to use?
+    \item System calls and interrupts store a number in a CPU register before calling trap, as an IDT index
+\end{itemize}
+
+Return from trap 
+\begin{itemize}
+    \item When OS is done handling, it calls a special return-from-trap instruction 
+    \begin{itemize}
+        \item Restore context
+        \item Lower privilege
+        \item Restore PC
+    \end{itemize}
+    \item OS doesn't always return to the same process
+\end{itemize}
+
+Why switch?
+\begin{itemize}
+    \item Sometimes when OS is in kernel mode, it cannot return back to the same process because of terminating or a blocking system call
+    \item Sometimes it doesn't want to (timeshare)
+    \item In such cases, a context switch is done
+\end{itemize}
+
+The OS scheduler
+\begin{itemize}
+    \item Two parts
+    \begin{itemize}
+        \item Scheduler which picks processes
+        \item Mechanism to switch to that process
+    \end{itemize}
+    \item Non preemptive schedulers are polite (only if process blocked or terminated)
+    \item Preemptive schedulers can switch even when a process is ready to continue
+    \begin{itemize}
+        \item CPU generates periodic timer interrupts
+        \item After servicing, the OS checks if the process has been running too long
+    \end{itemize}
+\end{itemize}
+
+\section{Scheduling Policies}
+
+What are we trying to optimize?
+\begin{itemize}
+    \item Maximize utilization
+    \item Minimize average turnaround time
+    \item Minimize average resopnse time
+    \item Fairness
+    \item Minimize overhead 
+\end{itemize}
+
+FIFO
+\begin{itemize}
+    \item Example: three processes arrive at t=0 in the order A,B,C
+    \item Schedule A, then B, then C
+    \item Problem: convoy effect (if the first process is long, turnaround times go high)
+\end{itemize}
+
+SJF (Shortest Job First)
+\begin{itemize}
+    \item Provably optimal when all processes arrive together
+    \item SJF is non-preemptive, so short jobs can still get stuck when short jobs arrive late
+\end{itemize}
+
+STCF (Shortest Time-to-Completion)
+\begin{itemize}
+    \item Pre-emptive scheduler
+    \item Pre-empts running task if time left is more than that of new arrival 
+\end{itemize}
+
+RR (Round Robin)
+\begin{itemize}
+    \item Every process executes for a fixed quantum slice
+    \item Slice big enough to amortize cost of context switch
+    \item Pre-emptive
+    \item Good for response time and fairness
+    \item Bad for turnaround time 
+\end{itemize}
+
+Schedulers in real systems
+\begin{itemize}
+    \item Real schedules are more complex
+    \item For example, Linux uses a Multi Level Feedback Queue (MLFQ)
+    \begin{itemize}
+        \item Many queues, with a priority order
+        \item Process from highest priority queue scheduled first
+        \item Within same priority, any algorithm like RR
+        \item Priority of process decays with its age
     \end{itemize}
 \end{itemize}
 \end{document}
