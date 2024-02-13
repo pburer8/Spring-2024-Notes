@@ -556,4 +556,21 @@ Schedulers in real systems
         \item Priority of process decays with its age
     \end{itemize}
 \end{itemize}
+
+\section{Introduction to Virtual Memory}
+
+Why virtualize?
+\begin{itemize}
+    \item It's messy!
+    \item Earlier, memory only had code of one running processes
+    \item Now, multiple active processes timeshare
+    \item Need to hide this complexity from user
+\end{itemize}
+
+Abstration: Virtual Address space
+\begin{itemize}
+    \item Virtual address space: every process assumes it has maximum memory space
+    \item ontains program code, heap, and stack
+    \item CPU issues loads and stores to virtual addresses
+\end{itemize}
 \end{document}
