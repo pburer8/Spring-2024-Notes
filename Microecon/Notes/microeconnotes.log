@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.12) (preloaded format=pdflatex 2024.1.18)  6 FEB 2024 10:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.12) (preloaded format=pdflatex 2024.1.18)  13 FEB 2024 09:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -505,26 +505,26 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write5
 \openout5 = `microeconnotes.toc'.
 
- [2] [3] [4] [5] [6] [7] (microeconnotes.aux)
+ [2] [3] [4] [5] [6] [7] [8] (microeconnotes.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `microeconnotes.out' has not changed.
-(rerunfilecheck)             Checksum: B119B7BD3A6F44E1B9925A55782B4D11;1391.
+(rerunfilecheck)             Checksum: 314D99C28D52BC5424858FE08303309D;1536.
  ) 
 Here is how much of TeX's memory you used:
- 20276 strings out of 474485
- 379530 string characters out of 5743734
+ 20279 strings out of 474485
+ 379566 string characters out of 5743734
  1937528 words of memory out of 5000000
- 42212 multiletter control sequences out of 15000+600000
+ 42213 multiletter control sequences out of 15000+600000
  567169 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,8n,107p,555b,569s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Marie\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Marie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Marie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Marie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Marie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Marie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Marie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Marie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Marie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Marie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Marie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Marie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on microeconnotes.pdf (7 pages, 149088 bytes).
+Output written on microeconnotes.pdf (8 pages, 151597 bytes).
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
- 17 named destinations out of 1000 (max. 500000)
- 77 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 155 PDF objects out of 1000 (max. 8388607)
+ 19 named destinations out of 1000 (max. 500000)
+ 85 words of extra memory for PDF output out of 10000 (max. 10000000)
 
