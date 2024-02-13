@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1707833303.20106 "c:/Users/Marie/Documents/Spring-2024-Notes/Operating Systems/Notes/operatingsysnotes.tex" "operatingsysnotes.pdf" "operatingsysnotes" 1707833305.09987 0
+["pdflatex"] 1707834473.95677 "c:/Users/Marie/Documents/Spring-2024-Notes/Operating Systems/Notes/operatingsysnotes.tex" "operatingsysnotes.pdf" "operatingsysnotes" 1707834475.69183 0
   "C:/Users/Marie/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1705514218 81684 e11c674afe7630b828c4f0e88a1b8253 ""
   "C:/Users/Marie/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1666820108 14064 dfbdb0408720005d896fbbab975c7079 ""
   "C:/Users/Marie/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1705585623 24224975 56664f5f707f5243edad391f37bab15c ""
@@ -137,11 +137,11 @@
   "C:/Users/Marie/AppData/Local/Programs/MiKTeX/tex/latex/tools/xspace.sty" 1700599895 4545 9f5ea23ab1c91476c42749893f790666 ""
   "C:/Users/Marie/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Marie/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "c:/Users/Marie/Documents/Spring-2024-Notes/Operating Systems/Notes/operatingsysnotes.tex" 1707833300 18715 9ebe90a25b00f1638f351ea3d4bc4011 ""
-  "operatingsysnotes.aux" 1707833304 901 5ad2b54c6617e05148365fc04eebf843 "pdflatex"
-  "operatingsysnotes.out" 1707833304 1063 fa9734e09ae82a08768dea19d1b33cc3 "pdflatex"
-  "operatingsysnotes.tex" 1707833300 18715 9ebe90a25b00f1638f351ea3d4bc4011 ""
-  "operatingsysnotes.toc" 1707833304 492 dd560dcb44dabb427875d6dad4a934f8 "pdflatex"
+  "c:/Users/Marie/Documents/Spring-2024-Notes/Operating Systems/Notes/operatingsysnotes.tex" 1707834472 19748 75bf9c1a0c97889eb19897ac61e0f407 ""
+  "operatingsysnotes.aux" 1707834475 901 de1dac9da9a4734e6e8608d8e4e93036 "pdflatex"
+  "operatingsysnotes.out" 1707834475 1063 fa9734e09ae82a08768dea19d1b33cc3 "pdflatex"
+  "operatingsysnotes.tex" 1707834472 19748 75bf9c1a0c97889eb19897ac61e0f407 ""
+  "operatingsysnotes.toc" 1707834475 492 dd560dcb44dabb427875d6dad4a934f8 "pdflatex"
   (generated)
   "operatingsysnotes.aux"
   "operatingsysnotes.log"

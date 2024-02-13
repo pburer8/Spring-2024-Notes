@@ -573,4 +573,32 @@ Abstration: Virtual Address space
     \item ontains program code, heap, and stack
     \item CPU issues loads and stores to virtual addresses
 \end{itemize}
+
+How is actual memory reached?
+\begin{itemize}
+    \item Address translation from VA to PA
+    \item OS allocates memory and tracks loation of processes
+    \item Actual translation by MMU
+\end{itemize}
+
+Example: Paging
+\begin{itemize}
+    \item OS divides virtual address space into fixed size pages, physial memory into frames
+    \item To allocate memory, a page is mapped to a free physical frame
+    \item Page table stores mappings from virtual page to physical frame
+    \item MMU has access to page tables
+\end{itemize}
+
+Goals of memory virtualization
+\begin{itemize}
+    \item Transprency: user programs shouldnt handle the details
+    \item Effiiency: minimize overhead
+    \item Isolation and protection: a user program should not be able to access anything outside its address space
+\end{itemize}
+
+How can a user allocate memory?
+\begin{itemize}
+    \item OS allocates a set of pags to the memory image of the process
+    \item Within this image, the process can allocate memory
+\end{itemize}
 \end{document}
