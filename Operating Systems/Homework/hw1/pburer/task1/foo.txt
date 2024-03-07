@@ -1,0 +1,4 @@
+a.out
+foo.txt
+shell
+shell.c

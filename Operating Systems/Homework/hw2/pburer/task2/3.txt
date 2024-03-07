@@ -1,0 +1,10 @@
+FIFO Turnaround: 52.95
+FIFO Response: 47.2
+
+SJF Turnaround: 40.95
+SJF Response: 35.2
+
+SRJF Turnaround: 39.85
+SRJF Response: 31.25
+
+Best turnaround and response is SRJF because it is pre-emptive, and thus can respond to and turnaround processes most efficiently.
