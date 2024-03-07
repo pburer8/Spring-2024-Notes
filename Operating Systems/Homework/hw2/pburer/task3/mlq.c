@@ -21,7 +21,7 @@ struct Process processes[] = {
     {17, 16, 5, 1},
     {18, 17, 4, 3},
     {19, 18, 7, 2},
-    {20, 19, 9, 1}
+    {20, 19, 9, 1},
     
 };
 
@@ -168,11 +168,11 @@ void schedule_processes(struct Process processes[], int num_processes) {
 
     //create turnaround and response sums to track avg times
     int high_turnaround = 0;
-    int high_response = 0;
+    int high_response[high_size];
     int medium_turnaround = 0;
-    int medium_response = 0;
+    int medium_response[medium_size];
     int low_turnaround = 0;
-    int low_response = 0;
+    int low_response[low_size];
     
     //while we still have processes to do
     while (completed_processes < num_processes) {
@@ -318,11 +318,12 @@ void schedule_processes(struct Process processes[], int num_processes) {
         int pid = -1;
         int arrival_time = -1;
         int burst_time = -1;
+        int response_time = -1;
 
         if (current_process[0] == 1) {
             //if this is an untouched process
             if (high_remaining_time[current_process[1]] == high_priority_queue[current_process[1]].burst_time) {
-                high_response += (current_time - high_priority_queue[current_process[1]].arrival_time);
+                high_response[current_process[1]] = (current_time - high_priority_queue[current_process[1]].arrival_time);
             }
 
             high_remaining_time[current_process[1]]--;
@@ -332,13 +333,14 @@ void schedule_processes(struct Process processes[], int num_processes) {
                 pid = high_priority_queue[current_process[1]].pid;
                 arrival_time = high_priority_queue[current_process[1]].arrival_time;
                 burst_time = high_priority_queue[current_process[1]].burst_time;
+                response_time = high_response[current_process[1]];
 
                 high_turnaround += (current_time - arrival_time);
             }
         } else if (current_process[0] == 2) {
             
             if (medium_remaining_time[current_process[1]] == medium_priority_queue[current_process[1]].burst_time) {
-                medium_response += (current_time - medium_priority_queue[current_process[1]].arrival_time);
+                medium_response[current_process[1]] = (current_time - medium_priority_queue[current_process[1]].arrival_time);
             }
 
             medium_remaining_time[current_process[1]]--;
@@ -348,13 +350,14 @@ void schedule_processes(struct Process processes[], int num_processes) {
                 pid = medium_priority_queue[current_process[1]].pid;
                 arrival_time = medium_priority_queue[current_process[1]].arrival_time;
                 burst_time = medium_priority_queue[current_process[1]].burst_time;
+                response_time = medium_response[current_process[1]];
 
                 medium_turnaround += (current_time - arrival_time);
             }
         } else if (current_process[0] == 3) {
 
             if (low_remaining_time[current_process[1]] == low_priority_queue[current_process[1]].burst_time) {
-                low_response += (current_time - low_priority_queue[current_process[1]].arrival_time);
+                low_response[current_process[1]] = (current_time - low_priority_queue[current_process[1]].arrival_time);
             }
 
             low_remaining_time[current_process[1]]--;
@@ -364,6 +367,7 @@ void schedule_processes(struct Process processes[], int num_processes) {
                 pid = low_priority_queue[current_process[1]].pid;
                 arrival_time = low_priority_queue[current_process[1]].arrival_time;
                 burst_time = low_priority_queue[current_process[1]].burst_time;
+                response_time = low_response[current_process[1]];
 
                 low_turnaround += (current_time - arrival_time);
             }
@@ -373,32 +377,47 @@ void schedule_processes(struct Process processes[], int num_processes) {
         if (remaining == 0) {
             printf("Executing Priority %d Process %d (Burst Time: %d)\n", current_process[0], pid, burst_time);
             int turnaround_time = current_time - arrival_time;
-            printf("Turnaround Time for Process %d: %d\n\n", pid, turnaround_time);
+            printf("Turnaround Time for Process %d: %d\n", pid, turnaround_time);
+            printf("Response Time for Process %d: %d\n\n", pid, response_time);
             completed_processes++;
         }
     }
 
-    
+    int high_response_ = 0;
+    int med_response_ = 0;
+    int low_response_ = 0;
+
+    for (int i = 0; i < num_processes; i++) {
+        if (i < high_size) {
+            high_response_ += high_response[i];
+        }
+        if (i < medium_size) {
+            med_response_ += medium_response[i];
+        }
+        if (i < low_size) {
+            low_response_ += low_response[i];
+        }
+    }
     float average_high_t = (float) high_turnaround / (float) high_size;
-    float average_high_r = (float) high_response / (float) high_size;
+    float average_high_r = (float) high_response_ / (float) high_size;
 
     printf("Average Turnaround for High Priority: %f\n", average_high_t);
     printf("Average Response for High Priority: %f\n\n", average_high_r);
 
     float average_med_t = (float) medium_turnaround / (float) medium_size;
-    float average_med_r = (float) medium_response / (float) medium_size;
+    float average_med_r = (float) med_response_ / (float) medium_size;
 
     printf("Average Turnaround for Medium Priority: %f\n", average_med_t);
     printf("Average Response for Medium Priority: %f\n\n", average_med_r);
 
     float average_low_t = (float) low_turnaround / (float) low_size;
-    float average_low_r = (float) low_response / (float) low_size;
+    float average_low_r = (float) low_response_ / (float) low_size;
 
     printf("Average Turnaround for Low Priority: %f\n", average_low_t);
     printf("Average Response for Low Priority: %f\n\n", average_low_r);
 
     int total_turnaround = high_turnaround + medium_turnaround + low_turnaround;
-    int total_response = high_response + medium_response + low_response;
+    int total_response = high_response_ + med_response_ + low_response_;
 
     float average_total_t = (float) total_turnaround / (float) num_processes;
     float average_total_r = (float) total_turnaround / (float) num_processes;
