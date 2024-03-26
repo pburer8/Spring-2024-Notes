@@ -601,4 +601,53 @@ How can a user allocate memory?
     \item OS allocates a set of pags to the memory image of the process
     \item Within this image, the process can allocate memory
 \end{itemize}
+\newpage
+\section{Stuff I didn't write down yet}
+
+\newpage
+\section{Locks}
+
+Locks: Basic idea
+
+When updating some shared variable, we can use a lock variable to protect it
+
+\begin{itemize}
+    \item Mutual exclusion
+    \item Fairness
+    \item Low overhead
+\end{itemize}
+
+Naive implementation:
+
+Lock disables interrupts
+
+Unlock enables them
+
+Flaws:
+\begin{itemize}
+    \item Disable and enable is privileged and can be misused
+    \item Doesn't work for multi-processor
+\end{itemize}
+
+Next implementation:
+
+Lock spins until a flag is 0, then updates it to 1 after
+
+Unlock sets to 0
+
+Flaws:
+\begin{itemize}
+    \item Busily waiting, takes CPU to do nothing
+    \item Still has race conditions (FAILED)
+\end{itemize}
+
+Software implementation: almost impossible
+
+Modern architecture uses hardware atomic instructions
+
+Atomic instruction: testAndSet
+
+Delivers mutual exclusion and fairness
+
+Alternative to spinning: yield, gives up CPU
 \end{document}
