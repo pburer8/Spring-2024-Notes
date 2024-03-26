@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1710861755.57723 "c:/Users/Marie/Documents/Spring-2024-Notes/Microecon/Notes/microeconnotes.tex" "microeconnotes.pdf" "microeconnotes" 1710861757.21866 0
+["pdflatex"] 1711467778.43104 "c:/Users/Marie/Documents/Spring-2024-Notes/Microecon/Notes/microeconnotes.tex" "microeconnotes.pdf" "microeconnotes" 1711467779.90097 0
   "C:/Users/Marie/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1705517818 81684 e11c674afe7630b828c4f0e88a1b8253 ""
   "C:/Users/Marie/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1666823708 14064 dfbdb0408720005d896fbbab975c7079 ""
   "C:/Users/Marie/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1705589223 24224975 56664f5f707f5243edad391f37bab15c ""
@@ -152,11 +152,11 @@
   "C:/Users/Marie/AppData/Local/Programs/MiKTeX/tex/latex/tools/xspace.sty" 1700603495 4545 9f5ea23ab1c91476c42749893f790666 ""
   "C:/Users/Marie/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Marie/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700131122 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "c:/Users/Marie/Documents/Spring-2024-Notes/Microecon/Notes/microeconnotes.tex" 1710861749 6481 145a807cb9c1f60660eb2be50a18bf00 ""
-  "microeconnotes.aux" 1710861756 1316 96ba986c24ca6a5885e54fc832e2c272 "pdflatex"
-  "microeconnotes.out" 1710861756 1536 314d99c28d52bc5424858fe08303309d "pdflatex"
-  "microeconnotes.tex" 1710861749 6481 145a807cb9c1f60660eb2be50a18bf00 ""
-  "microeconnotes.toc" 1710861756 785 3cb0b3cb3366d2189a33c9b9b9a1448c "pdflatex"
+  "c:/Users/Marie/Documents/Spring-2024-Notes/Microecon/Notes/microeconnotes.tex" 1711467775 7006 ca51ac04a53ebf8f7bf926e3083ba2e7 ""
+  "microeconnotes.aux" 1711467779 1845 2a4fb54d5ea3821e58c8c5a3835e6d1b "pdflatex"
+  "microeconnotes.out" 1711467779 2299 03b5435c450a7360b2d067fd6b85ac4a "pdflatex"
+  "microeconnotes.tex" 1711467775 7006 ca51ac04a53ebf8f7bf926e3083ba2e7 ""
+  "microeconnotes.toc" 1711467779 1150 f0e5046889f62424597da979230ae27c "pdflatex"
   (generated)
   "microeconnotes.aux"
   "microeconnotes.log"

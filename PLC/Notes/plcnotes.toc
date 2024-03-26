@@ -3,3 +3,5 @@
 \contentsline {subsection}{\numberline {2.1}Partial Applications and Sections}{4}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}List Combinators}{4}{subsection.2.2}%
 \contentsline {section}{\numberline {3}Data Types and Recursion}{5}{section.3}%
+\contentsline {section}{\numberline {4}Stuff I didn't take notes on}{5}{section.4}%
+\contentsline {section}{\numberline {5}Introduction to Agda}{5}{section.5}%
