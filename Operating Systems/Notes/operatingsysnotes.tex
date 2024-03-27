@@ -154,7 +154,7 @@ Build Large Computer Systems
     \item OS as an example of large system design
     \item Goals: 
 \end{itemize}
-
+\newpage
 \section{OS Structure and Architecture}
 
 Modern OS Functionality:
@@ -292,7 +292,7 @@ Interrupt-based asynchronous I/O
         \item Restore hardware state
     \end{itemize}
 \end{itemize}
-
+\newpage
 \section{Process API and Abstraction}
 
 OS provides process abstraction
@@ -415,7 +415,7 @@ How does a shell work?
     \item Shell reads user command, forks a child, execs the command executable, waits, and reads
     \item Common commands like ls are all executables that are simply exec'd by the shell
 \end{itemize}
-
+\newpage
 \section{Proper Mechanism of Execution}
 
 Low-level mechanisms
@@ -505,7 +505,7 @@ The OS scheduler
         \item After servicing, the OS checks if the process has been running too long
     \end{itemize}
 \end{itemize}
-
+\newpage
 \section{Scheduling Policies}
 
 What are we trying to optimize?
@@ -556,7 +556,7 @@ Schedulers in real systems
         \item Priority of process decays with its age
     \end{itemize}
 \end{itemize}
-
+\newpage
 \section{Introduction to Virtual Memory}
 
 Why virtualize?
@@ -602,6 +602,51 @@ How can a user allocate memory?
     \item Within this image, the process can allocate memory
 \end{itemize}
 \newpage
+\section{Demand Paging}
+
+Main memory is not always enough
+
+We have x amount of frames in physical memory, but n amount of frames in swap space.
+
+Swap these on demand
+
+Present bit in PTE, indicates if a page is in memory or not.
+
+If present bit is not set on MMU lookup, page fault
+
+OS moves to kernel mode, switches to another process while lookup happens
+
+What happens on memory access:
+\begin{itemize}
+    \item CPU issuses load to VA for data
+    \item Checks all 3 caches
+    \item In case of miss, goes to main memory
+    \item MMU issues request to TLB
+    \item If no hit, page fault
+\end{itemize}
+
+Complications during a page fault:
+\begin{itemize}
+    \item If no room in memory, must issue a swap.
+    \item Time consuming
+\end{itemize}
+
+Replacement policies: FIFO, LRU
+
+\section{LRU Approximation}
+
+Second chance algorithm:
+
+Maintain a reference bit next to each frame in a circular linked list
+
+If the reference bit is 1, set it to 0 and move on
+
+If it is 0, replace
+
+If we use the page, set the bit to 1
+
+Enhanced second chance, two bits
+
 \section{Stuff I didn't write down yet}
 
 \newpage
