@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1711490441.27472 "c:/Users/Marie/Documents/Spring-2024-Notes/PLC/Notes/plcnotes.tex" "plcnotes.pdf" "plcnotes" 1711490442.9917 0
+["pdflatex"] 1711493851.44803 "c:/Users/Marie/Documents/Spring-2024-Notes/PLC/Notes/plcnotes.tex" "plcnotes.pdf" "plcnotes" 1711493853.15388 0
   "C:/Users/Marie/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1705517818 81684 e11c674afe7630b828c4f0e88a1b8253 ""
   "C:/Users/Marie/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1666823708 14064 dfbdb0408720005d896fbbab975c7079 ""
   "C:/Users/Marie/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1705589223 24224975 56664f5f707f5243edad391f37bab15c ""
@@ -146,11 +146,11 @@
   "C:/Users/Marie/AppData/Local/Programs/MiKTeX/tex/latex/tools/xspace.sty" 1700603495 4545 9f5ea23ab1c91476c42749893f790666 ""
   "C:/Users/Marie/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Marie/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700131122 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "c:/Users/Marie/Documents/Spring-2024-Notes/PLC/Notes/plcnotes.tex" 1711490436 2474 a947f6e888cdd2f0c717d1091df0c59a ""
-  "plcnotes.aux" 1711490442 1038 b6229a08539292660ba2bd0904b8fdb9 "pdflatex"
-  "plcnotes.out" 1711490442 1271 35e740880d65898a1a4f3018c97ab4ee "pdflatex"
-  "plcnotes.tex" 1711490436 2474 a947f6e888cdd2f0c717d1091df0c59a ""
-  "plcnotes.toc" 1711490442 589 1036820f8f353d740df714cf5a0d22a0 "pdflatex"
+  "c:/Users/Marie/Documents/Spring-2024-Notes/PLC/Notes/plcnotes.tex" 1711493850 2653 19b6be12ebd9a8201b5d97a96a0ed33d ""
+  "plcnotes.aux" 1711493852 1038 b6229a08539292660ba2bd0904b8fdb9 "pdflatex"
+  "plcnotes.out" 1711493852 1271 35e740880d65898a1a4f3018c97ab4ee "pdflatex"
+  "plcnotes.tex" 1711493850 2653 19b6be12ebd9a8201b5d97a96a0ed33d ""
+  "plcnotes.toc" 1711493852 589 1036820f8f353d740df714cf5a0d22a0 "pdflatex"
   (generated)
   "plcnotes.aux"
   "plcnotes.log"
