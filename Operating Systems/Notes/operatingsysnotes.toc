@@ -8,3 +8,4 @@
 \contentsline {section}{\numberline {8}LRU Approximation}{27}{section.8}%
 \contentsline {section}{\numberline {9}Stuff I didn't write down yet}{27}{section.9}%
 \contentsline {section}{\numberline {10}Locks}{28}{section.10}%
+\contentsline {section}{\numberline {11}Condition Variables}{29}{section.11}%
