@@ -106,6 +106,7 @@ Waterfall Process Model
     \item Release and Maintenance
 \end{itemize}
 
+\newpage
 \section{Code Construction}
 
 Who is the code for?
@@ -119,7 +120,46 @@ Who is the code for?
     Must be readable and easy to understand 
 \end{itemize}
 
+\newpage
 \section{Debugging}
 
 Testing finds errors, debugging repairs them
+
+\section{Stuff I Didn't write down}
+
+\section{Object Oriented Design Principles}
+
+\subsection{Liskov Substitution Principle}
+
+The key of OCP: Abstraction and Polymorphism
+
+Implemented by inheritance, how do we measure quality?
+
+Example: Birds can fly, penguins cannot fly.
+
+Throwing an error does not model "penguins cannot fly", it models "try, error"
+
+Design by contract:
+
+Advertised behavior of an object, requirements and promises
+
+Derived class services should require no more, promise no less.
+
+Is-A relationship must refer to the behavior of the class
+
+Replaceability: Any code which can legally call a class's methods must be able to substitute any subclass without modification
+
+\subsection{Dependency Inversion Principle}
+
+High-level should not depend on low-level, both should depend on abstractions
+
+Design to an inheritance not an implementation
+
+Abstract classes/interfaces are not subject to change
+
+\subsection{The Founding Principles}
+
+Closely related, violating one means violating others
+
+Keep them in mind at all times
 \end{document}

@@ -10,6 +10,55 @@ struct Page {
     int read; //read = 0, write = 1
 };
 
+void FIFO() {
+    struct Page frames[MEM_SIZE];
+    int ptr = 0;
+    int faults = 0;
+    int in[100];
+
+
+    for (int i = 0; i < MEM_SIZE; i++) {
+        struct Page fill = {.id = -1, .read = -1};
+        frames[i] = fill;
+    }
+    for (int i = 0; i < 100; i++) {
+        in[i] = 0;
+    }
+
+    FILE* fptr = fopen("page_references.txt", "r");
+
+    char line[25];
+
+    int page_request_count = 0;
+    while (fgets(line, 25, fptr)) {
+        int id = atoi(strtok(line, " "));
+        char read = strtok(NULL, " ")[0];
+        int r = 0;
+        if (read == 'w') {
+            r = 1;
+        }
+        
+        if (in[id] != 1) {
+            faults++;
+            struct Page prev_page = frames[ptr];
+            if (prev_page.id != -1) {
+                in[prev_page.id] = 0;
+            }
+            in[id] = 1;
+
+
+            struct Page new_page = {.id=id, .read=r};
+            frames[ptr] = new_page;
+            ptr = (ptr + 1) % MEM_SIZE;
+        }
+        page_request_count++;
+    }
+
+    printf("Number of faults with FIFO model: %d\n", faults);
+    float percent_rate = (float) faults / (float) page_request_count;
+    printf("Percentage rate: %.2f%%\n", percent_rate*100);
+}
+
 struct node {
     struct Page* data;
     struct node* prev;
@@ -95,62 +144,13 @@ void print_list(struct node* head) {
     printf("\n");
 }
 
-void FIFO() {
-    struct Page frames[MEM_SIZE];
-    int ptr = 0;
-    int faults = 0;
-    int in[100];
-
-
-    for (int i = 0; i < MEM_SIZE; i++) {
-        struct Page fill = {.id = -1, .read = -1};
-        frames[i] = fill;
-    }
-    for (int i = 0; i < 100; i++) {
-        in[i] = 0;
-    }
-
-    FILE* fptr = fopen("page_references.txt", "r");
-
-    char line[25];
-
-    int page_request_count = 0;
-    while (fgets(line, 25, fptr)) {
-        int id = atoi(strtok(line, " "));
-        char read = strtok(NULL, " ")[0];
-        int r = 0;
-        if (read == 'w') {
-            r = 1;
-        }
-        
-        if (in[id] != 1) {
-            faults++;
-            struct Page prev_page = frames[ptr];
-            if (prev_page.id != -1) {
-                in[prev_page.id] = 0;
-            }
-            in[id] = 1;
-
-
-            struct Page new_page = {.id=id, .read=r};
-            frames[ptr] = new_page;
-            ptr = (ptr + 1) % MEM_SIZE;
-        }
-        page_request_count++;
-    }
-
-    printf("Number of faults with FIFO model: %d\n", faults);
-    float percent_rate = (float) faults / (float) page_request_count;
-    printf("Percentage rate: %.2f%%\n", percent_rate*100);
-}
-
 void LRU() {
     struct Page filler = {.id = -1, .read = -1};
     struct node* head = create_node(&filler);
     
     struct node* tail = head;
 
-    for (int i = 2; i <= MEM_SIZE; i++) {
+    for (int i = 2; i <= 20; i++) {
         struct Page* f = malloc(sizeof(struct Page));
 
         f->id = i * -1;
@@ -209,8 +209,75 @@ void LRU() {
     printf("Percent rate: %.2f%%\n", percent_rate*100);
 }
 
+void SECOND_CHANCE() {
+    struct Page frames[MEM_SIZE];
+
+    for (int i = 0; i < MEM_SIZE; i++) {
+        struct Page p = {.id = -1, .read = -1};
+
+        frames[i] = p;
+    }
+
+    int ptr = 0;
+    int faults = 0;
+    int page_request_count = 0;
+
+    int second[100];
+    int in[100];
+    for (int i = 0; i < 100; i++) {
+        second[i] = 0;
+        in[i] = 0;
+    }
+
+    FILE* fptr = fopen("page_references.txt", "r");
+    char line[25];
+
+    while (fgets(line, 25, fptr)) {
+        int id = atoi(strtok(line, " "));
+        char read = strtok(NULL, " ")[0];
+        int r = 0;
+        if (read == 'w') {
+            r = 1;
+        }
+
+        if (in[id] == 1) {
+            second[id] = 1;
+        } else {
+            faults++;
+
+            if (frames[ptr].id == -1) {
+                in[id] = 1;
+
+                struct Page p = {.id = id, .read = r};
+
+                frames[ptr] = p;
+                ptr = (ptr + 1) % MEM_SIZE;
+            } else {
+                in[id] = 1;
+
+                while (second[frames[ptr].id] == 1) {
+                    second[frames[ptr].id] = 0;
+                    ptr = (ptr + 1) % MEM_SIZE;
+                }
+
+                in[frames[ptr].id] = 0;
+
+                struct Page p = {.id=id, .read=r};
+                frames[ptr] = p;
+                ptr = (ptr + 1) % MEM_SIZE;
+            }
+        }
+
+        page_request_count++;
+    }
+
+    printf("Number of faults with second chance model: %d\n", faults);
+    float percent_rate = (float) faults / (float) page_request_count;
+    printf("Perent rate: %.2f%%\n", percent_rate * 100);
+}
 int main() {
     FIFO();
     LRU();
+    SECOND_CHANCE();
     return 0;
 }
