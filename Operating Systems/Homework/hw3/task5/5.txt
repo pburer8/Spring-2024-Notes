@@ -1,0 +1,14 @@
+Fault rate with memory size of 20:
+FIFO: 78.7%
+LRU: 77.9%
+Second chance: 78.05%
+En. second chance: 77.85%
+
+Fault rate with memory size of 100:
+FIFO: 5.00%
+LRU: 5.00%
+Second chance: 5.00%
+En. second chance: 5.00%
+
+With memory size of 100, the size of memory exceeds (or is equal to), the number of pages we are expected to handle.
+Thus, the only faults are the 100 "cold start" faults

@@ -7,7 +7,6 @@ const int MEM_SIZE = 20;
 
 struct Page {
     int id;
-    int read; //read = 0, write = 1
 };
 
 struct node {
@@ -77,14 +76,6 @@ void print_list(struct node* head) {
     while (head) {
         struct Page p = *(head->data);
         printf("Node #%d ", p.id);
-
-        if (p.read == 0) {
-            printf("(Read) ");
-        } else if (p.read == 1) {
-            printf("(Write) ");
-        } else {
-            printf("(None) ");
-        }
     
 
         head = head->next;
@@ -95,7 +86,7 @@ void print_list(struct node* head) {
     printf("\n");
 }
 
-void FIFO() {
+void FIFO(char* filename) {
     struct Page frames[MEM_SIZE];
     int ptr = 0;
     int faults = 0;
@@ -103,25 +94,20 @@ void FIFO() {
 
 
     for (int i = 0; i < MEM_SIZE; i++) {
-        struct Page fill = {.id = -1, .read = -1};
+        struct Page fill = {.id = -1};
         frames[i] = fill;
     }
     for (int i = 0; i < 100; i++) {
         in[i] = 0;
     }
 
-    FILE* fptr = fopen("page_references.txt", "r");
+    FILE* fptr = fopen(filename, "r");
 
     char line[25];
 
     int page_request_count = 0;
     while (fgets(line, 25, fptr)) {
         int id = atoi(strtok(line, " "));
-        char read = strtok(NULL, " ")[0];
-        int r = 0;
-        if (read == 'w') {
-            r = 1;
-        }
         
         if (in[id] != 1) {
             faults++;
@@ -132,7 +118,7 @@ void FIFO() {
             in[id] = 1;
 
 
-            struct Page new_page = {.id=id, .read=r};
+            struct Page new_page = {.id=id};
             frames[ptr] = new_page;
             ptr = (ptr + 1) % MEM_SIZE;
         }
@@ -144,8 +130,8 @@ void FIFO() {
     printf("Percentage rate: %.2f%%\n", percent_rate*100);
 }
 
-void LRU() {
-    struct Page filler = {.id = -1, .read = -1};
+void LRU(char* filename) {
+    struct Page filler = {.id = -1};
     struct node* head = create_node(&filler);
     
     struct node* tail = head;
@@ -154,7 +140,6 @@ void LRU() {
         struct Page* f = malloc(sizeof(struct Page));
 
         f->id = i * -1;
-        f->read = -1;
 
         tail = append(tail, f);
     }
@@ -166,17 +151,12 @@ void LRU() {
         in[i] = 0;
     }
 
-    FILE* fptr = fopen("page_references.txt", "r");
+    FILE* fptr = fopen(filename, "r");
     char line[25];
 
     int page_request_count = 0;
     while (fgets(line, 25, fptr)) {
         int id = atoi(strtok(line, " "));
-        char read = strtok(NULL, " ")[0];
-        int r = 0;
-        if (read == 'w') {
-            r = 1;
-        }
 
         if (in[id] == 1) {
             struct node* node = malloc(sizeof(struct node));
@@ -191,7 +171,6 @@ void LRU() {
 
             struct Page* p = malloc(sizeof(struct Page));
             p->id = id;
-            p->read = r;
 
             int prev_id = tail->data->id;
 
@@ -210,7 +189,8 @@ void LRU() {
 }
 
 int main() {
-    FIFO();
-    LRU();
+    char* file = "page_references.txt";
+    FIFO(file);
+    LRU(file);
     return 0;
 }
