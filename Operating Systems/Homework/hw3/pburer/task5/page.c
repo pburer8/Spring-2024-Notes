@@ -3,7 +3,7 @@
 #include<stdbool.h>
 #include<string.h>
 
-const int MEM_SIZE = 100;
+const int MEM_SIZE = 200;
 
 struct Page {
     int id;

@@ -263,6 +263,7 @@ void ENHANCED_SECOND_CHANCE(char* filename) {
 
     int ptr = 0;
     int faults = 0;
+    int writes = 0;
     int page_request_count = 0;
 
     int in[100];
@@ -290,9 +291,16 @@ void ENHANCED_SECOND_CHANCE(char* filename) {
             if (frames[ptr].id == -1) {
                 in[id] = ptr;
 
-                struct Page p = {.id = id, .second = 0};
+                if (rw == 'r') {
+                    struct Page p = {.id = id, .second = 0, .write = 0};
+                    frames[ptr] = p;
+                } else {
+                    struct Page p = {.id = id, .second = 0, .write = 1};
+                    frames[ptr] = p;
+                    writes++;
+                }
 
-                frames[ptr] = p;
+            
                 ptr = (ptr + 1) % MEM_SIZE;
             } else {
                 while (frames[ptr].second == 1 || frames[ptr].write == 1) {
@@ -314,6 +322,7 @@ void ENHANCED_SECOND_CHANCE(char* filename) {
                 } else {
                     struct Page p = {.id = id, .second = 0, .write = 1};
                     frames[ptr] = p;
+                    writes++;
                 }
                 
                 ptr = (ptr + 1) % MEM_SIZE;
@@ -326,6 +335,9 @@ void ENHANCED_SECOND_CHANCE(char* filename) {
     printf("Number of faults with enhanced second chance model: %d\n", faults);
     float percent_rate = (float) faults / (float) page_request_count;
     printf("Percent rate: %.2f%%\n", percent_rate*100);
+    printf("Number of writes on faults: %d\n", writes);
+    float write_rate = (float) writes / (float) faults;
+    printf("Percent rate: %.2f%%\n", write_rate*100);
 }
 int main() {
     char* file = "page_references.txt";
