@@ -278,6 +278,10 @@ void ENHANCED_SECOND_CHANCE(char* filename) {
         int id = atoi(strtok(line, " "));
         char rw = strtok(NULL, " ")[0];
 
+        if (rw == 'w') {
+            writes++;
+        }
+
         if (in[id] != -1) {
             if (rw == 'r') {
                 frames[in[id]].second = 1; 
@@ -297,7 +301,6 @@ void ENHANCED_SECOND_CHANCE(char* filename) {
                 } else {
                     struct Page p = {.id = id, .second = 0, .write = 1};
                     frames[ptr] = p;
-                    writes++;
                 }
 
             
@@ -322,7 +325,6 @@ void ENHANCED_SECOND_CHANCE(char* filename) {
                 } else {
                     struct Page p = {.id = id, .second = 0, .write = 1};
                     frames[ptr] = p;
-                    writes++;
                 }
                 
                 ptr = (ptr + 1) % MEM_SIZE;
