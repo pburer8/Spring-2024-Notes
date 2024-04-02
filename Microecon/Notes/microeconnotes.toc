@@ -12,3 +12,4 @@
 \contentsline {subsection}{\numberline {3.2}Prospect Theory}{8}{subsection.3.2}%
 \contentsline {subsubsection}{\numberline {3.2.1}Probability Weighting Function}{8}{subsubsection.3.2.1}%
 \contentsline {subsubsection}{\numberline {3.2.2}Loss Aversion}{8}{subsubsection.3.2.2}%
+\contentsline {section}{\numberline {4}Theory of the Firm}{9}{section.4}%
