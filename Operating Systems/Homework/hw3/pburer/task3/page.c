@@ -278,15 +278,9 @@ void ENHANCED_SECOND_CHANCE(char* filename) {
         int id = atoi(strtok(line, " "));
         char rw = strtok(NULL, " ")[0];
 
-        if (rw == 'w') {
-            writes++;
-        }
-
         if (in[id] != -1) {
-            if (rw == 'r') {
-                frames[in[id]].second = 1; 
-            } else {
-                frames[in[id]].second = 1;
+            frames[in[id]].second = 1;
+            if (rw == 'w') {
                 frames[in[id]].write = 1;
             }
         } else {
@@ -295,17 +289,17 @@ void ENHANCED_SECOND_CHANCE(char* filename) {
             if (frames[ptr].id == -1) {
                 in[id] = ptr;
 
-                if (rw == 'r') {
-                    struct Page p = {.id = id, .second = 0, .write = 0};
-                    frames[ptr] = p;
-                } else {
-                    struct Page p = {.id = id, .second = 0, .write = 1};
-                    frames[ptr] = p;
+                struct Page p = {.id = id, .second = 0, .write = 0};
+                frames[ptr] = p;
+
+                if (rw == 'w') {
+                    frames[ptr].write = 1;
+                    writes++;
                 }
 
-            
                 ptr = (ptr + 1) % MEM_SIZE;
             } else {
+
                 while (frames[ptr].second == 1 || frames[ptr].write == 1) {
                     if (frames[ptr].second == 1) {
                         frames[ptr].second = 0;
@@ -319,12 +313,12 @@ void ENHANCED_SECOND_CHANCE(char* filename) {
 
                 in[frames[ptr].id] = -1;
 
-                if (rw == 'r') {
-                    struct Page p = {.id = id, .second = 0, .write = 0};
-                    frames[ptr] = p;
-                } else {
-                    struct Page p = {.id = id, .second = 0, .write = 1};
-                    frames[ptr] = p;
+                struct Page p = {.id = id, .second = 0, .write = 0};
+                frames[ptr] = p;
+                
+                if (rw == 'w') {
+                    frames[ptr].write = 1;
+                    writes++;
                 }
                 
                 ptr = (ptr + 1) % MEM_SIZE;
