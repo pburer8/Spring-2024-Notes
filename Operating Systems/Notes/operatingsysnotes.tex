@@ -706,9 +706,13 @@ Another common requirement is waiting and signaling
 
 Inefficient to busy-wait, we need a new synchronization primitive.
 
-\section{Machine Learning}
+\section{Semaphores}
 
-Stuff I didn't write down
+A primitive synchronization variable with an underlying counter
 
-We can also have multiple neurons, and multiple layers of neurons
+Up/post increments and wakes up a blocked process
+
+Down/wait decrements and blocks if negative
+
+A semaphore initialized with n allows n threads
 \end{document}
