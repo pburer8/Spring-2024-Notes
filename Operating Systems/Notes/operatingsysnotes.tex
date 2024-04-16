@@ -715,4 +715,16 @@ Up/post increments and wakes up a blocked process
 Down/wait decrements and blocks if negative
 
 A semaphore initialized with n allows n threads
+
+\section{Concurrency Bugs}
+
+Threaded program bugs are non-deterministic
+
+Deadlock bugs: threads cannot execute
+
+Non-deadlock: threads execute with error
+
+Atomicity bugs: assumptions made are violated during execution (solution: locks for mutex)
+
+Order-violation: desired order of memory accesses is flipped (solution: condition variables)
 \end{document}
