@@ -7,7 +7,8 @@
 \contentsline {section}{\numberline {7}Demand Paging}{26}{section.7}%
 \contentsline {section}{\numberline {8}LRU Approximation}{27}{section.8}%
 \contentsline {section}{\numberline {9}Stuff I didn't write down yet}{27}{section.9}%
-\contentsline {section}{\numberline {10}Locks}{28}{section.10}%
-\contentsline {section}{\numberline {11}Condition Variables}{29}{section.11}%
+\contentsline {section}{\numberline {10}Locks}{27}{section.10}%
+\contentsline {section}{\numberline {11}Condition Variables}{28}{section.11}%
 \contentsline {section}{\numberline {12}Semaphores}{29}{section.12}%
 \contentsline {section}{\numberline {13}Concurrency Bugs}{29}{section.13}%
+\contentsline {section}{\numberline {14}Communication with I/O Devices}{30}{section.14}%

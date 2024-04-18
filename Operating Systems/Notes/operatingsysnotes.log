@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.12) (preloaded format=pdflatex 2024.1.18)  16 APR 2024 08:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.12) (preloaded format=pdflatex 2024.1.18)  18 APR 2024 08:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -511,20 +511,20 @@ LaTeX2e <2023-11-01>
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `operatingsysnotes.out' has not changed.
-(rerunfilecheck)             Checksum: 10227C7BFC1DF23815CF9D103D77294E;1944.
+(rerunfilecheck)             Checksum: B574422DAA614631CFC27E0C5FDB0B68;2148.
  ) 
 Here is how much of TeX's memory you used:
- 20284 strings out of 474485
- 379591 string characters out of 5743734
+ 20286 strings out of 474485
+ 379613 string characters out of 5743734
  1931528 words of memory out of 5000000
- 42198 multiletter control sequences out of 15000+600000
+ 42199 multiletter control sequences out of 15000+600000
  562515 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,6n,107p,568b,629s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Marie\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Marie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Marie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Marie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on operatingsysnotes.pdf (30 pages, 100464 bytes).
+Output written on operatingsysnotes.pdf (30 pages, 101936 bytes).
 PDF statistics:
- 235 PDF objects out of 1000 (max. 8388607)
- 46 named destinations out of 1000 (max. 500000)
- 117 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 240 PDF objects out of 1000 (max. 8388607)
+ 47 named destinations out of 1000 (max. 500000)
+ 125 words of extra memory for PDF output out of 10000 (max. 10000000)
 

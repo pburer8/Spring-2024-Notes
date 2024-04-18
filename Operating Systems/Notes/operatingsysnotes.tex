@@ -649,7 +649,7 @@ Enhanced second chance, two bits
 
 \section{Stuff I didn't write down yet}
 
-\newpage
+
 \section{Locks}
 
 Locks: Basic idea
@@ -727,4 +727,26 @@ Non-deadlock: threads execute with error
 Atomicity bugs: assumptions made are violated during execution (solution: locks for mutex)
 
 Order-violation: desired order of memory accesses is flipped (solution: condition variables)
+\newpage
+\section{Communication with I/O Devices}
+
+I/O devices connect via a bus
+
+High speed: PCI
+
+Others: SCSI, USB, SATA
+
+Simple Device Model:
+
+Block devices store a set number of blocks
+
+Character devices produce/consume streams of bytes
+
+Devices expose an interface of memory registers
+
+Internals usually hidden
+
+OS talks to I/O registers through drivers, but mainly in and out instructions
+
+Also uses memory mapped I/O
 \end{document}
